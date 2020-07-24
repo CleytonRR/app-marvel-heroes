@@ -6,14 +6,6 @@ import {
   ContainerAvatar,
   AvatarLinearGradient,
   Avatar,
-  ContainerImages,
-  SectionImage,
-  ContainerTitles,
-  TitleSection,
-  ImageBox,
-  ContainerLinearGradient,
-  SubTitleImage,
-  TitleImage,
 } from "./styles";
 
 import Alien from "../../assets/icons/alien.svg";
@@ -21,7 +13,8 @@ import Antihero from "../../assets/icons/antihero.svg";
 import Hero from "../../assets/icons/hero.svg";
 import Human from "../../assets/icons/human.svg";
 import Villain from "../../assets/icons/villain.svg";
-import SpiderMan from "../../assets/chars/spider-man.png";
+
+import SectionChar from "../../components/SectionChar";
 
 const avatars = [
   {
@@ -61,20 +54,7 @@ function HomeScreen() {
         ))}
       </ContainerAvatar>
 
-      <SectionImage>
-        <ContainerTitles>
-          <TitleSection>Heróis</TitleSection>
-          <SubTitle>Ver tudo</SubTitle>
-        </ContainerTitles>
-
-        <ContainerImages>
-          <ImageBox source={SpiderMan}>
-            <ContainerLinearGradient />
-            <SubTitleImage>Peter Parker</SubTitleImage>
-            <TitleImage>Homem Aranha</TitleImage>
-          </ImageBox>
-        </ContainerImages>
-      </SectionImage>
+      <SectionChar />
     </Container>
   );
 }
