@@ -25,9 +25,20 @@ export const Avatar = styled.View`
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background-color: yellow;
   justify-content: center;
   align-items: center;
+`;
+
+export const AvatarLinearGradient = styled(LinearGradient).attrs(() => ({}))`
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  align-self: center;
 `;
 
 export const SectionImage = styled.View``;
