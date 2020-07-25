@@ -1,7 +1,9 @@
 import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
 
-export const SectionImage = styled.View``;
+export const SectionImage = styled.SafeAreaView`
+  margin-bottom: 20px;
+`;
 export const SubTitle = styled.Text`
   font-size: 16px;
   font-family: "GilroySemiBold";
