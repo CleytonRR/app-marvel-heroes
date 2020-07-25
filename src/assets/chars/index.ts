@@ -1,0 +1,16 @@
+export default {
+"black-panther": require("./black-panther.png"),
+"deadpool": require("./deadpool.png"),
+"dr-doom": require("./dr-doom.png"),
+"green-goblin": require("./green-goblin.png"),
+"happy-hogan": require("./happy-hogan.png"),
+"howard-stark": require("./howard-stark.png"),
+"iron-man": require("./iron-man.png"),
+"mary-jane": require("./mary-jane.png"),
+"punisher": require("./punisher.png"),
+"red-skull": require("./red-skull.png"),
+"ronan": require("./ronan.png"),
+"spider-man": require("./spider-man.png"),
+"talos": require("./talos.png"),
+"thanos": require("./thanos.png"),
+"venom": require("./venom.png"),}
