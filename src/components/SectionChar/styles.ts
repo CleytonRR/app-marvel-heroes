@@ -30,6 +30,8 @@ export const ContainerImages = styled.ScrollView.attrs(() => ({
   margin-top: 20px;
 `;
 
+export const ButtonSection = styled.TouchableOpacity``;
+
 export const ImageBox = styled.ImageBackground.attrs(() => ({
   borderRadius: 20,
 }))`

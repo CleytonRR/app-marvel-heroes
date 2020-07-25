@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
 import file from "../../assets/application.json";
 import Images from "../../assets/chars";
 import {
@@ -8,12 +9,14 @@ import {
   ContainerTitles,
   TitleSection,
   ImageBox,
+  ButtonSection,
   ContainerLinearGradient,
   SubTitleImage,
   TitleImage,
 } from "./styles";
 
 const SectionChar = () => {
+  const navigation = useNavigation();
   const [data, setData] = useState<object>({});
   const [typeName, setTypeName] = useState<string[]>([]);
 
@@ -23,6 +26,10 @@ const SectionChar = () => {
       setTypeName(Object.keys(file));
     })();
   }, []);
+
+  function redirectForDetail() {
+    navigation.navigate("Detail");
+  }
 
   return (
     <>
@@ -34,17 +41,17 @@ const SectionChar = () => {
           </ContainerTitles>
           <ContainerImages>
             {data[item].map((detail, index) => (
-              <ImageBox
-                key={index}
-                source={
-                  Images[`${detail.imagePath.split("/")[2].split(".")[0]}`]
-                }
-              >
-                <ContainerLinearGradient />
-                <SubTitleImage>{detail.alterEgo}</SubTitleImage>
-                <TitleImage>{detail.name}</TitleImage>
-                {console.log(detail.name)}
-              </ImageBox>
+              <ButtonSection key={index} onPress={redirectForDetail}>
+                <ImageBox
+                  source={
+                    Images[`${detail.imagePath.split("/")[2].split(".")[0]}`]
+                  }
+                >
+                  <ContainerLinearGradient />
+                  <SubTitleImage>{detail.alterEgo}</SubTitleImage>
+                  <TitleImage>{detail.name}</TitleImage>
+                </ImageBox>
+              </ButtonSection>
             ))}
           </ContainerImages>
         </SectionImage>
