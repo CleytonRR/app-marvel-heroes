@@ -63,4 +63,5 @@ export const Description = styled.Text`
   font-size: 14px;
   font-family: "GilroyMedium";
   color: #b7b7c8;
+  margin-bottom: 20px;
 `;

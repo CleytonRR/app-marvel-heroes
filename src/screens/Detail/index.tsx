@@ -14,6 +14,8 @@ import {
   Description,
 } from "./styles";
 
+import SkillSection from "../../components/SkillSection";
+
 import image from "../../assets/chars/spider-man.png";
 import Age from "../../assets/icons/age.svg";
 import Weight from "../../assets/icons/weight.svg";
@@ -67,6 +69,7 @@ const Detail = () => {
             habilidades, Parker cria um traje e, como Homem Aranha, torna-se uma
             estrela de televisão."
           </Description>
+          <SkillSection />
         </ContainerScroll>
       </ImageBackground>
     </>
