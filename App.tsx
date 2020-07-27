@@ -1,17 +1,19 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text } from "react-native";
+import { useFonts } from "expo-font";
+import Routes from "./src/routes";
 
 export default function App() {
-  return (
-    <View>
-      <Text style={styles.teste}>Apenas um teste</Text>
-    </View>
-  );
-}
+  let [fontsLoaded] = useFonts({
+    Gilroy: require("./src/assets/fonts/gilroy-regular.ttf"),
+    GilroyBold: require("./src/assets/fonts/gilroy-bold.ttf"),
+    GilroyHeavy: require("./src/assets/fonts/gilroy-heavy.ttf"),
+    GilroyMedium: require("./src/assets/fonts/gilroy-medium.ttf"),
+    GilroySemiBold: require("./src/assets/fonts/gilroy-semibold.ttf"),
+  });
 
-const styles = StyleSheet.create({
-  teste: {
-    color: "blue",
-  },
-});
+  if (!fontsLoaded) {
+    return <Text>Carregando...</Text>;
+  }
+  return <Routes />;
+}
