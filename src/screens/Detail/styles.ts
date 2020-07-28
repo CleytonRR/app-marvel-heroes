@@ -8,7 +8,7 @@ export const StatusBar = styled.StatusBar.attrs(() => {
 export const ImageBackground = styled.ImageBackground.attrs(() => {
   resizeMode: "cover";
 })`
-  flex: 1;
+  height: 490px;
 `;
 
 export const ContainerLinearGradient = styled(LinearGradient).attrs(() => ({
@@ -37,9 +37,11 @@ export const Title = styled.Text`
   font-size: 40px;
 `;
 
-export const ContainerScroll = styled.ScrollView`
+export const ContainerScroll = styled.ScrollView.attrs(() => ({
+  paddingHorizontal: "5%",
+}))`
   flex: 1;
-  padding: 5%;
+  background-color: #000;
 `;
 export const ContainerAtribute = styled.View`
   flex-direction: row;
