@@ -15,6 +15,7 @@ import {
 } from "./styles";
 
 import SkillSection from "../../components/SkillSection";
+import SectionChar from "../../components/SectionChar";
 
 import image from "../../assets/chars/spider-man.png";
 import Age from "../../assets/icons/age.svg";
@@ -70,6 +71,7 @@ const Detail = () => {
             estrela de televisão."
           </Description>
           <SkillSection />
+          <SectionChar />
         </ContainerScroll>
       </ImageBackground>
     </>
