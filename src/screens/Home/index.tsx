@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   Container,
   SubTitle,
@@ -40,22 +41,26 @@ const avatars = [
 ];
 
 function HomeScreen() {
+  const navigation = useNavigation();
+
   return (
-    <Container>
-      <SubTitle>Bem vindo ao Marvel Heroes</SubTitle>
-      <Title>Escolha o seu personagem</Title>
+    <>
+      <Container>
+        <SubTitle>Bem vindo ao Marvel Heroes</SubTitle>
+        <Title>Escolha o seu personagem</Title>
 
-      <ContainerAvatar>
-        {avatars.map((item, index) => (
-          <Avatar key={index}>
-            <AvatarLinearGradient colors={item.colors} />
-            <item.label width={50} height={30} />
-          </Avatar>
-        ))}
-      </ContainerAvatar>
+        <ContainerAvatar>
+          {avatars.map((item, index) => (
+            <Avatar key={index}>
+              <AvatarLinearGradient colors={item.colors} />
+              <item.label width={50} height={30} />
+            </Avatar>
+          ))}
+        </ContainerAvatar>
 
-      <SectionChar />
-    </Container>
+        <SectionChar />
+      </Container>
+    </>
   );
 }
 
