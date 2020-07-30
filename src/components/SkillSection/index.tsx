@@ -3,8 +3,16 @@ import { Container, TitleSkill } from "./styles";
 
 import SkillBar from "../SkillBar";
 
+interface Params {
+  force: number;
+  intelligence: number;
+  agility: number;
+  endurance: number;
+  velocity: number;
+}
+
 const SkillSection = ({ skills }) => {
-  function createSkillList(skillsData) {
+  function createSkillList(skillsData: Params) {
     const skillNames = Object.keys(skillsData);
     var skillList = [];
     skillNames.forEach((item) => {

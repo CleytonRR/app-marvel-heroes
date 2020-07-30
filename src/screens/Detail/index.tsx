@@ -48,7 +48,7 @@ interface Params {
 
 const Detail: React.FC = () => {
   const route = useRoute();
-  const routePrams = route.params.data as Params;
+  const routeParams = route.params.data as Params;
   const {
     alterEgo,
     name,
@@ -57,7 +57,7 @@ const Detail: React.FC = () => {
     caracteristics,
     abilities,
     movies,
-  } = routePrams;
+  } = routeParams;
 
   function getAge(yearbirth: string) {
     return new Date().getFullYear() - parseInt(yearbirth);

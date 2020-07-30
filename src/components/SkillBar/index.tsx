@@ -2,10 +2,6 @@ import React from "react";
 import Svg, { Line } from "react-native-svg";
 import { Container, SkillName, ContainerBar } from "./styles";
 
-interface SkillType {
-  [index: number]: { label: string; quantity: int };
-}
-
 const SkillBar = ({ skill }) => {
   return (
     <>
