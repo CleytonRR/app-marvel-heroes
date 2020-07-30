@@ -27,8 +27,8 @@ const SectionChar = () => {
     })();
   }, []);
 
-  function redirectForDetail() {
-    navigation.navigate("Detail");
+  function redirectForDetail(data: Object) {
+    navigation.navigate("Detail", { data });
   }
 
   return (
@@ -41,7 +41,10 @@ const SectionChar = () => {
           </ContainerTitles>
           <ContainerImages>
             {data[item].map((detail, index) => (
-              <ButtonSection key={index} onPress={redirectForDetail}>
+              <ButtonSection
+                key={index}
+                onPress={() => redirectForDetail(detail)}
+              >
                 <ImageBox
                   source={
                     Images[`${detail.imagePath.split("/")[2].split(".")[0]}`]
