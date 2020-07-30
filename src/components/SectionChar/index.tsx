@@ -15,9 +15,19 @@ import {
   TitleImage,
 } from "./styles";
 
-const SectionChar = () => {
+interface DataHero {
+  name: string;
+  alterEgo: string;
+  imagePath: string;
+}
+
+interface DataHeroArray {
+  heroes: DataHero[];
+}
+
+const SectionChar: React.FC = () => {
   const navigation = useNavigation();
-  const [data, setData] = useState<object>({});
+  const [data, setData] = useState<DataHeroArray>();
   const [typeName, setTypeName] = useState<string[]>([]);
 
   useEffect(() => {
@@ -40,7 +50,7 @@ const SectionChar = () => {
             <SubTitle>Ver tudo</SubTitle>
           </ContainerTitles>
           <ContainerImages>
-            {data[item].map((detail, index) => (
+            {data[item].map((detail: DataHero, index: number) => (
               <ButtonSection
                 key={index}
                 onPress={() => redirectForDetail(detail)}
