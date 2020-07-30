@@ -11,6 +11,7 @@ export const Container = styled.View`
 export const SkillName = styled.Text`
   font-size: 12px;
   font-family: "GilroyMedium";
+  text-transform: capitalize;
   color: #f8f8f8;
 `;
 

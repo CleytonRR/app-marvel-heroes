@@ -21,7 +21,7 @@ const SkillBar = ({ skill }) => {
                 y2="0"
                 stroke="rgba(255,255,255,0.2)"
                 strokeWidth="100%"
-                strokeDasharray="3"
+                strokeDasharray="2"
               />
               <Line
                 x1="0"
@@ -31,7 +31,7 @@ const SkillBar = ({ skill }) => {
                 clipPath="url(#clip)"
                 stroke="rgba(255,255,255,0.7)"
                 strokeWidth="100%"
-                strokeDasharray="3"
+                strokeDasharray="2"
               />
             </Svg>
           </ContainerBar>
