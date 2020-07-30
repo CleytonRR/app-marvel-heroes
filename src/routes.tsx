@@ -28,6 +28,7 @@ function Routes() {
             headerTitle: "",
             headerTransparent: true,
             headerTintColor: "#fff",
+            gestureEnabled: true,
           }}
         />
       </Stack.Navigator>
