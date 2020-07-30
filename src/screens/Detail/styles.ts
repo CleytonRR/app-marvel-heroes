@@ -5,9 +5,9 @@ export const StatusBar = styled.StatusBar.attrs(() => {
   barStyle: "dark-content";
 })``;
 
-export const ImageBackground = styled.ImageBackground.attrs(() => {
-  resizeMode: "cover";
-})`
+export const ImageBackground = styled.ImageBackground.attrs(() => ({
+  resizeMode: "stretch",
+}))`
   height: 490px;
 `;
 
@@ -37,9 +37,7 @@ export const Title = styled.Text`
   font-size: 40px;
 `;
 
-export const ContainerScroll = styled.ScrollView.attrs(() => ({
-  paddingHorizontal: "5%",
-}))`
+export const ContainerScroll = styled.ScrollView.attrs(() => ({}))`
   flex: 1;
   background-color: #000;
 `;
@@ -47,6 +45,7 @@ export const ContainerAtribute = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding: 0 5%;
 `;
 
 export const ContainerDetail = styled.View`
@@ -66,4 +65,5 @@ export const Description = styled.Text`
   font-family: "GilroyMedium";
   color: #b7b7c8;
   margin-bottom: 20px;
+  padding: 0 5%;
 `;
