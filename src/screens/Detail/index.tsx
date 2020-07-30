@@ -1,4 +1,6 @@
 import React from "react";
+import { useRoute } from "@react-navigation/native";
+
 import {
   StatusBar,
   ImageBackground,
@@ -23,7 +25,30 @@ import Weight from "../../assets/icons/weight.svg";
 import Universe from "../../assets/icons/universe.svg";
 import Height from "../../assets/icons/height.svg";
 
-const Detail = ({ route }) => {
+interface caracteristic {
+  birth: string;
+  weight: {
+    value: number;
+  };
+  height: {
+    value: number;
+  };
+  universe: string;
+}
+
+interface Params {
+  alterEgo: string;
+  name: string;
+  imagePath: string;
+  biography: string;
+  caracteristics: caracteristic;
+  abilities: object;
+  movies: [];
+}
+
+const Detail: React.FC = () => {
+  const route = useRoute();
+  const routePrams = route.params.data as Params;
   const {
     alterEgo,
     name,
@@ -32,7 +57,7 @@ const Detail = ({ route }) => {
     caracteristics,
     abilities,
     movies,
-  } = route.params.data;
+  } = routePrams;
 
   function getAge(yearbirth: string) {
     return new Date().getFullYear() - parseInt(yearbirth);
