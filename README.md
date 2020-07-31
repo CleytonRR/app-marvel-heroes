@@ -2,12 +2,11 @@
 <p align="center">
 <img src="https://i.imgur.com/SxSYlTq.png" alt="Marvel-heros" width="350" height="200">
 </p>
+<p align=center>Design by <a href="https://umpontoseis.com/">umpontoseis</a></p>
 
 ## About :clipboard:
 
 Project made using React-native and typescript for the DevChallenge challenge.
-
-<p align=center>Design by <a href="https://umpontoseis.com/">umpontoseis</a></p>
 
 ## Requirements :page_with_curl:
 
